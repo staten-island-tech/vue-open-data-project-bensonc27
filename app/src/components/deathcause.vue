@@ -1,12 +1,21 @@
 <template>
-  <router-link :to=""> </router-link>
+  <router-link :to="deathPath">
+    <h1>{{ death.leading_cause }}</h1>
+  </router-link>
 </template>
 
 <script setup>
-const props = defineProps({});
+const props = defineProps({
+  death: {
+    type: Object,
+  },
+  year: {
+    type: Number,
+  },
+});
 
-const pkmnPath = computer(() => {
-  return `/pokemon/${props.id}`;
+const deathPath = computer(() => {
+  return `/death/${props.year}`;
 });
 </script>
 
