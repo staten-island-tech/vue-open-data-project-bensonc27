@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    <DeathCard />
-  </div>
+  <div class="container"></div>
 </template>
 
 <script setup>
@@ -19,4 +17,4 @@ onMounted(() => {
 });
 </script>
 
-<style scoped></style>
+<style></style>

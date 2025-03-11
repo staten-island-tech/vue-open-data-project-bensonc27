@@ -12,7 +12,7 @@ const router = createRouter({
     {
       path: "/death/:year",
       //:id represents variable in the URL
-      name: "deathData",
+      name: "DeathData",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
