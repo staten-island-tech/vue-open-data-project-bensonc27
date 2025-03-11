@@ -5,6 +5,7 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
 const props = defineProps({
   death: {
     type: Object,
@@ -14,7 +15,7 @@ const props = defineProps({
   },
 });
 
-const deathPath = computer(() => {
+const deathPath = computed(() => {
   return `/death/${props.year}`;
 });
 </script>
