@@ -1,5 +1,5 @@
 <template>
-  <div class="container"></div>
+  <div><Card v-for="death in deaths" :key="death.leading_cause"></Card></div>
 </template>
 
 <script setup>
@@ -11,6 +11,7 @@ async function getValue() {
   let data = await res.json();
   deaths.value = data.results;
 }
+console.log(deaths.value);
 onMounted(() => {
   getValue();
 });
