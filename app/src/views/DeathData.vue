@@ -1,5 +1,4 @@
 <script setup>
-import Card from "../components/DeathCard.vue";
 import { ref, onMounted } from "vue";
 const deaths = ref("");
 async function getDeath() {
