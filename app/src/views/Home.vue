@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    <div class="">// prob should add v for here ltr</div>
-  </div>
+  <div class="container"></div>
 </template>
 
 <script setup>
