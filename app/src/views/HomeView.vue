@@ -1,5 +1,8 @@
 <template>
-  <div><Card v-for="death in deaths" :deaths="deaths" :key="death.leading_cause"></Card></div>
+  <h1 class="text-center text-4xl font-bold">Death Statistics</h1>
+  <div class="flex flex-wrap p-4 justify-evenl">
+    <Card class="m-auto" v-for="(death, index) in deaths" :key="index" :deaths="death"></Card>
+  </div>
 </template>
 
 <script setup>
@@ -15,7 +18,7 @@ async function getData() {
     } else {
       const data = await response.json();
       console.log(data);
-      deaths.value = data.results;
+      deaths.value = data;
     }
   } catch (error) {
     console.log(error);
