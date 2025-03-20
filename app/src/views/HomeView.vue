@@ -1,7 +1,7 @@
 <template>
   <h1 class="text-center text-4xl font-bold">Death Statistics</h1>
-  <div class="flex flex-wrap p-4 justify-evenl">
-    <Card class="m-auto" v-for="(death, index) in deaths" :key="index" :deaths="death"></Card>
+  <div class="flex flex-col p-4">
+    <Card class="mt-12" v-for="(death, index) in deaths" :key="index" :deaths="death"></Card>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ import { ref, onMounted } from "vue";
 const deaths = ref([]);
 async function getData() {
   try {
-    const response = await fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json/");
+    const response = await fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json?$limit=50");
     if (response.status != 200) {
       throw new Error(response);
     } else {
