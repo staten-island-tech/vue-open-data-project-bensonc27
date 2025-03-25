@@ -11,7 +11,6 @@
 import { computed } from "vue";
 const props = defineProps({
   deaths: Object,
-  year: Number,
 });
 const deathPath = computed(() => {
   return "/deaths/${props.death.year}";

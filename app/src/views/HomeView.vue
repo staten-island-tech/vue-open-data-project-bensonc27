@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import Card from "@/components/DeathCard.vue";
+import Card from "@/components/Cards.vue";
 import { ref, onMounted } from "vue";
 
 const deaths = ref([]);
