@@ -13,7 +13,7 @@ const props = defineProps({
   deaths: Object,
 });
 const deathPath = computed(() => {
-  return "/deaths/${props.death.year}";
+  return `/deaths/${props.deaths.year}`;
 });
 </script>
 
