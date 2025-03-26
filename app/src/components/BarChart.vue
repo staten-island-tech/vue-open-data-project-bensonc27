@@ -16,7 +16,7 @@ const props = defineProps({
 });
 
 const chartData = computed(() => ({
-  labels: props.deaths.map((d) => `${d.leading_cause} (${d.year})`),
+  labels: props.deaths.map((death) => `${death.leading_cause} (${death.year})`),
   datasets: [
     {
       label: "Number of Deaths",
