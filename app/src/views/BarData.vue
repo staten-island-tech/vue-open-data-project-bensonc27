@@ -13,6 +13,10 @@ const inputrace = (event) => {
   getRace();
 };
 
+const goHome = () => {
+  router.push("/");
+};
+
 async function getRace() {
   try {
     const response = await fetch(
@@ -38,6 +42,7 @@ onMounted(() => {
 
 <template>
   <h1>Select Race</h1>
+
   <form>
     <select @change="inputrace" name="Ethnicity List" class="">
       <option value="">Select Race</option>

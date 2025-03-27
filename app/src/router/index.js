@@ -11,13 +11,8 @@ const router = createRouter({
       name: "Home",
       component: HomeView,
     },
-    {
-      path: "/death/:year",
-      name: "DeathData",
-      component: () => import("../views/HomeView.vue"),
-    },
     { path: "/barchart/:race_ethnicity", name: "BarData", component: BarData },
-    { path: "/piechart", name: "PieChart", component: PieChart },
+    { path: "/piechart/:year", name: "PieChart", component: PieChart },
   ],
 });
 
