@@ -1,7 +1,11 @@
 <template>
-  <h1 class="text-center text-4xl font-bold">Death Statistics</h1>
-  <div class="flex flex-col p-4">
-    <Card class="mt-12" v-for="death in deaths" :key="index" :deaths="death"></Card>
+  <div class="grid grid-cols-3 gap-6 p-4">
+    <Card
+      class="shadow-lg border-2 border-gray-300 p-4 rounded-lg"
+      v-for="(death, index) in deaths"
+      :key="index"
+      :deaths="death"
+    />
   </div>
 </template>
 

@@ -8,12 +8,8 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
 const props = defineProps({
   deaths: Object,
-});
-const deathPath = computed(() => {
-  return `/deaths/${props.deaths.year}`;
 });
 </script>
 

@@ -3,11 +3,11 @@
 </template>
 
 <script setup>
-import { defineProps, computed } from "vue";
+import { ref } from "vue";
 import { Bar } from "vue-chartjs";
-import { Chart as ChartJS, BarElement, CategoryScale, LinearScale } from "chart.js";
+import { Chart as ChartJS, Tooltip, BarElement, CategoryScale, LinearScale } from "chart.js";
 
-ChartJS.register(BarElement, CategoryScale, LinearScale);
+ChartJS.register(BarElement, Tooltip, CategoryScale, LinearScale);
 
 const props = defineProps({
   deaths: {
@@ -15,16 +15,14 @@ const props = defineProps({
   },
 });
 
-const chartData = computed(() => ({
+const chartData = ref({
   labels: props.deaths.map((death) => `${death.leading_cause} (${death.year})`),
   datasets: [
     {
-      label: "Number of Deaths",
       data: props.deaths.map((d) => d.deaths),
-      backgroundColor: "blue",
+      backgroundColor: ["#FF5733"],
     },
   ],
-}));
+});
 </script>
-
 <style scoped></style>

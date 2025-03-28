@@ -1,22 +1,15 @@
 <script setup>
-import { ref, onMounted } from "vue";
-import { useRoute, useRouter } from "vue-router";
+import { ref, watch } from "vue";
 import PieChart from "@/components/PieChart.vue";
 
 const deaths = ref("");
-const route = useRoute();
-const router = useRouter();
-
-const inputyear = (event) => {
-  const selected = event.target.value;
-  router.push(`/piechart/${selected}`);
-  getRace();
-};
+const selectedYear = ref("");
 
 async function getyear() {
+  if (!selectedYear.value) return;
   try {
     const response = await fetch(
-      `https://data.cityofnewyork.us/resource/jb7j-dtam.json?race_ethnicity=${route.params.year}&$limit=50`
+      `https://data.cityofnewyork.us/resource/jb7j-dtam.json?year=${selectedYear.value}&$limit=10`
     );
     if (response.status != 200) {
       throw new Error(response);
@@ -30,8 +23,7 @@ async function getyear() {
     alert("sorry could not find that");
   }
 }
-
-onMounted(() => {
+watch(selectedYear, () => {
   getyear();
 });
 </script>
@@ -39,7 +31,7 @@ onMounted(() => {
 <template>
   <h1>Select year</h1>
   <form>
-    <select @change="inputyear" name="Year" class="">
+    <select v-model="selectedYear" name="Year" class="">
       <option value="">Select Year</option>
       <option value="2007">2007</option>
       <option value="2008">2008</option>

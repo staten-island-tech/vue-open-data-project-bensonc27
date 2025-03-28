@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import BarData from "@/views/BarData.vue";
-import PieChart from "@/views/PieData.vue";
+import BarData from "../views/BarData.vue";
+import PieChart from "../views/PieData.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,8 +11,8 @@ const router = createRouter({
       name: "Home",
       component: HomeView,
     },
-    { path: "/barchart/:race_ethnicity", name: "BarData", component: BarData },
-    { path: "/piechart/:year", name: "PieChart", component: PieChart },
+    { path: "/barchart/", name: "BarData", component: BarData },
+    { path: "/piechart/", name: "PieChart", component: PieChart },
   ],
 });
 
