@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black w-250 h-120">
+  <div class="bg-black w-250 h-160">
     <Pie :data="pieData" :options="chartOptions" />
   </div>
 </template>
