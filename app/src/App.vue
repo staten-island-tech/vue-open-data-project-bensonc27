@@ -1,5 +1,5 @@
-<template class="">
-  <div class="justify-center items-center">
+<template class="bg-black">
+  <div class="justify-center bg-black items-center">
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/barchart/">BarChart</RouterLink>
     <RouterLink to="/piechart">PieChart</RouterLink>
