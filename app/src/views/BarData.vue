@@ -22,8 +22,6 @@ const deaths = ref("");
 const selectedrace = ref("");
 
 async function getRace() {
-  if (!selectedrace.value) return;
-
   try {
     const response = await fetch(
       `https://data.cityofnewyork.us/resource/jb7j-dtam.json?race_ethnicity=${selectedrace.value}&$limit=15`

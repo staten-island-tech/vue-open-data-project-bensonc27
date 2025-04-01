@@ -24,7 +24,6 @@ const deaths = ref("");
 const selectedYear = ref("");
 
 async function getyear() {
-  if (!selectedYear.value) return;
   try {
     const response = await fetch(
       `https://data.cityofnewyork.us/resource/jb7j-dtam.json?year=${selectedYear.value}&$limit=10`
