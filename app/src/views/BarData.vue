@@ -1,7 +1,7 @@
 <template>
   <form class="bg-black">
     <select v-model="selectedrace" class="text-white" name="Ethnicity List">
-      <option class="text-white" value="">Select Race</option>
+      <option class="text-black" value="">Select Race</option>
       <option class="text-black" value="Asian and Pacific Islander">
         Asian and Pacific Islander
       </option>
