@@ -1,7 +1,7 @@
 <template>
-  <div class="grid grid-cols-3 gap-6 p-4">
+  <div class="flex flex-wrap justify-between gap-4">
     <Card
-      class="shadow-lg border-2 border-gray-300 p-4 rounded-lg"
+      class="w-[30%] shadow-lg border-2 border-gray-300 p-4 rounded-lg"
       v-for="(death, index) in deaths"
       :key="index"
       :deaths="death"
@@ -34,5 +34,3 @@ onMounted(() => {
   getData();
 });
 </script>
-
-<style scoped></style>

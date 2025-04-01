@@ -1,5 +1,11 @@
+<template>
+  <div class="w-400 h-200">
+    <Pie :data="pieData" :options="chartOptions" />
+  </div>
+</template>
+
 <script setup>
-import { ref } from "vue";
+import { computed } from "vue";
 import { Pie } from "vue-chartjs";
 import {
   Chart as ChartJS,
@@ -19,30 +25,52 @@ const props = defineProps({
   },
 });
 
-const pieData = ref({
+const pieData = computed(() => ({
   labels: props.deaths.map((death) => death.leading_cause),
   datasets: [
     {
       data: props.deaths.map((death) => death.deaths),
       backgroundColor: [
-        "#FF5733",
-        "#33FF57",
-        "#3357FF",
-        "#FF33A1",
-        "#F0E130",
-        "#E133FF",
-        "#FF8133",
-        "#33FFBD",
-        "#FFC433",
-        "#FF33D1",
+        "#3a5a40",
+        "#588157",
+        "#a3b18a",
+        "#dad7cd",
+        "#344e41",
+        "#52796f",
+        "#84a98c",
+        "#cad2c5",
+        "#2f3e46",
+        "#354f52",
       ],
+      borderColor: "#1a1a1a",
+      borderWidth: 1,
     },
   ],
-});
+}));
+
+const chartOptions = computed(() => ({
+  plugins: {
+    title: {
+      text: "Mortality Distribution",
+      color: "#B8B8B8",
+      font: {
+        family: '"Crimson Text"',
+        size: 18,
+      },
+    },
+    legend: {
+      labels: {
+        color: "#B8B8B8",
+        font: {
+          family: '"Crimson Text"',
+          size: 12,
+        },
+      },
+    },
+  },
+}));
 </script>
 
-<template>
-  <div class="w-[1000px] h-[600px]">
-    <Pie :data="pieData" :options="chartOptions" />
-  </div>
-</template>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600;700&display=swap");
+</style>
