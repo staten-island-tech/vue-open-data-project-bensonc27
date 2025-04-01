@@ -1,6 +1,6 @@
 <template>
   <form class="bg-black">
-    <select v-model="selectedYear"  name="Year">
+    <select v-model="selectedYear" class="text-white" name="Year">
       <option class="text-white" value="">Select Year</option>
       <option class="text-black" value="2007">2007</option>
       <option class="text-black" value="2008">2008</option>
