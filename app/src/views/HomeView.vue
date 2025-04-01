@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap justify-between gap-4">
+  <div class="bg-black flex flex-wrap justify-between gap-4">
     <Card
       class="w-[30%] shadow-lg border-2 border-gray-300 p-4 rounded-lg"
       v-for="death in deaths"

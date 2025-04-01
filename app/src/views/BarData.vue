@@ -1,15 +1,15 @@
 <template>
   <form>
-    <select v-model="selectedrace" name="Ethnicity List" class="text-black">
-      <option value="">Select Race</option>
-      <option value="Asian and Pacific Islander">Asian and Pacific Islander</option>
-      <option value="Black Non-Hispanic">Black Non-Hispanic</option>
-      <option value="Hispanic">Hispanic</option>
-      <option value="White Non-Hispanic">White Non-Hispanic</option>
+    <select v-model="selectedrace" name="Ethnicity List" >
+      <option class="text-black" value="">Select Race</option>
+      <option class="text-black" value="Asian and Pacific Islander">Asian and Pacific Islander</option>
+      <option class="text-black" value="Black Non-Hispanic">Black Non-Hispanic</option>
+      <option class="text-black" value="Hispanic">Hispanic</option>
+      <option class="text-black" value="White Non-Hispanic">White Non-Hispanic</option>
     </select>
   </form>
 
-  <div class="w-[1000px] h-[1500px]">
+  <div class="bg-black w-[1000px] h-[1500px]">
     <BarChart class="" :deaths="deaths"></BarChart>
   </div>
 </template>

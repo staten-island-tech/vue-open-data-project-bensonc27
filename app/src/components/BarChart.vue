@@ -1,5 +1,5 @@
 <template>
-  <div class="w-325 h-500 p-6 rounded-lg shadow-md">
+  <div class="w-325 bg-black h-500 p-6 rounded-lg shadow-md">
     <h1 class="text-center font-bold text-gray-200 mb-6 text-4xl">Race Statistics</h1>
     <Bar :data="chartData" :options="chartOptions" />
   </div>

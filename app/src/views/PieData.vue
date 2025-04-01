@@ -1,15 +1,15 @@
 <template>
   <form>
     <select v-model="selectedYear" class="text-black" name="Year">
-      <option value="">Select Year</option>
-      <option value="2007">2007</option>
-      <option value="2008">2008</option>
-      <option value="2009">2009</option>
-      <option value="2010">2010</option>
-      <option value="2011">2011</option>
-      <option value="2012">2012</option>
-      <option value="2013">2013</option>
-      <option value="2014">2014</option>
+      <option class="text-black" value="">Select Year</option>
+      <option class="text-black" value="2007">2007</option>
+      <option class="text-black" value="2008">2008</option>
+      <option class="text-black" value="2009">2009</option>
+      <option class="text-black" value="2010">2010</option>
+      <option class="text-black" value="2011">2011</option>
+      <option class="text-black" value="2012">2012</option>
+      <option class="text-black" value="2013">2013</option>
+      <option class="text-black" value="2014">2014</option>
     </select>
   </form>
 
